@@ -1,0 +1,19 @@
+name: swarm
+vendor: Kevin Glavin <archen.sol@gmail.com>
+architecture: amd64
+frameworks: docker-1.3
+icon: meta/swarm.svg
+version: 0.0.1
+binaries:
+ - name: bin/swarm
+ - name: bin/join
+   description: "convenience wrapper for swarm.swarm join"
+ - name: bin/create
+   description: "convenience wrapper for swarm.swarm create"
+ - name: bin/manage
+   description: "convenience wrapper for swarm.swarm manage"
+ - name: bin/list
+   description: "convenience wrapper for swarm.swarm list"
+ - name: bin/help
+   description: "convenience wrapper for swarm.swarm help" 
+

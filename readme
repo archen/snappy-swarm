@@ -1,0 +1,22 @@
+Docker Swarm for Snappy!
+
+https://github.com/docker/swarm
+
+Build with:
+snappy build package-dir
+
+Copy the resulting snap package into your snappy instance and install it:
+snappy install swarm_XXXXX_amd64.snap
+
+or using snappy-remote:
+snappy-remote --url=ssh://X.X.X.X:YYYY install ./swarm_XXXXX_amd64.snap
+
+NOTE you will have to modify /apps/docker/current/etc/docker.conf to contain:
+DOCKER_OPTIONS="-H 0.0.0.0:2375"
+and either reboot or manually restart the docker service.
+
+All of the swarm commands are "shortcutted" to swarm.[cmd] to play nice with Snappy's $pkgname.$binary requirement. So, instad of having to type:
+swarm.swarm create
+
+You can use:
+swarm.create

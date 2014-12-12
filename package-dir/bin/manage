@@ -1,0 +1,2 @@
+#!/bin/bash
+/apps/swarm/current/bin/swarm manage "$@"
